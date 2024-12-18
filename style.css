@@ -1,35 +1,51 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-:root{
+:root {
     --primary: #ff2c2c;
     --secondary: #ffffff;
-    --secondary-light: rgb(173,173,173);
+    --secondary-light: rgb(173, 173, 173);
     --dark1: #222222;
     --dark2: #050505;
 
 }
 
-body{
+header{
+    background-color: var(--dark2);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    padding: 5px 0;
+}
+
+body {
     font-size: 18px;
     font-family: 'Signika', sans-serif;
     color: var(--secondary);
 }
 
-.navbar{
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+
+}
+
+.navbar ul {
     display: flex;
     justify-content: flex-end;
 }
 
-.navbar ul{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navbar a{
+.navbar a {
     font-size: 1.5rem;
     padding: 10px;
     text-decoration: none;
@@ -38,40 +54,40 @@ body{
 
 }
 
-.navbar a:hover{
+.navbar a:hover {
     border-bottom: var(--primary) solid;
 }
 
 li {
     list-style-type: none;
-  }
+}
 
-.hero{
+.hero {
     background-color: var(--dark1);
     position: relative;
 }
 
-.hero img{
+.hero img {
     width: 100%;
     height: 530px;
     opacity: 0.35;
 }
 
-span{
+span {
     color: var(--primary);
 }
 
 /* circle profile */
-.profile div{
+.profile div {
     position: absolute;
 }
 
-.profile{
+.profile {
     display: flex;
     justify-content: center;
 }
 
-.square{
+.square {
     width: 320px;
     height: 450px;
     background-color: var(--dark1);
@@ -81,7 +97,7 @@ span{
 
 }
 
-.circle-trans{
+.circle-trans {
     width: 290px;
     height: 290px;
     border-radius: 50%;
@@ -91,7 +107,7 @@ span{
     top: 90px;
 }
 
-.circle{
+.circle {
     width: 230px;
     height: 230px;
     border-radius: 50%;
@@ -100,100 +116,100 @@ span{
     top: 120px;
 }
 
-.profile-img{
+.profile-img {
     top: 120px;
     z-index: 20;
 }
 
-.profile-img img{
+.profile-img img {
     width: 202px;
     height: 230px;
     border-radius: 50%;
 }
 
-.square-text{
+.square-text {
     font-size: 1.5rem;
     color: var(--secondary);
     top: 380px;
     z-index: 11;
 }
 
-.square-text2{
+.square-text2 {
     font-size: 0.8rem;
     color: var(--secondary);
     top: 418px;
     z-index: 11;
 }
 
-.square-text3{
+.square-text3 {
     font-size: 1.3rem;
     color: var(--secondary);
     top: 490px;
     z-index: 11;
 }
 
-.square-text3:hover{
+.square-text3:hover {
     border-bottom: var(--primary)solid;
 }
 
-.square-text3 a{
+.square-text3 a {
     color: var(--secondary);
     text-decoration: none;
 }
 
-.contact-icon{
+.contact-icon {
     top: 450px;
     z-index: 11;
 }
 
-.contact-icon img{
+.contact-icon img {
     width: 40px;
     margin: 0 10px;
     color: #ffffff;
 }
 
-.contact-icon img:hover{
+.contact-icon img:hover {
     transform: scale(1.2);
 }
 
 /* Briefcase */
 
-.briefcase{
+.briefcase {
     background-color: var(--dark1);
 }
 
-.briefcase-section h2{
+.briefcase-section h2 {
     padding: 40px;
     text-align: center;
 }
 
-.briefcase-grid{
+.briefcase-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(290px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(290px, auto));
     gap: 15px;
     width: 90%;
     margin: 0 auto;
 }
 
-.briefcase-grid img{
+.briefcase-grid img {
     width: 100%;
     border-radius: 10px;
     transition: transform 0.2s ease;
 }
 
-.briefcase-grid img:hover{
+.briefcase-grid img:hover {
     transform: scale(1.1);
 }
 
 /* Skills */
 
-section.skills{
+section.skills {
     background-color: var(--dark1);
 }
 
-.skill{
+.skill {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     justify-content: center;
     gap: 170px;
     width: 90%;
@@ -202,31 +218,31 @@ section.skills{
 
 }
 
-.skill h2{
+.skill h2 {
     padding-bottom: 60px;
 }
 
-.skill img{
+.skill img {
     width: 90px;
 }
 
-.knowledge{
+.knowledge {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(110px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(110px, auto));
     justify-content: center;
     gap: 25px;
 }
 
-.tools{
+.tools {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(70px,auto));
+    grid-template-columns: repeat(auto-fit, minmax(70px, auto));
     justify-content: center;
     gap: 50px;
 }
 
 /* Tooltip */
 
-.skill h3{
+.skill h3 {
     background-color: var(--dark2);
     text-align: center;
     border-radius: 5px;
@@ -235,12 +251,229 @@ section.skills{
     width: 100px;
     opacity: 0;
     color: var(--primary);
-    transform: translate(0px,-100px);
+    transform: translate(0px, -100px);
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .knowledge>div:hover h3,
-.tools>div:hover h3{
+.tools>div:hover h3 {
     opacity: 1;
     transform: translate(0px, -150px);
+}
+
+/* About */
+
+.about {
+    background-color: var(--dark2);
+}
+
+.about-flex {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0 100px;
+}
+
+.about p {
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+    line-height: 2.5rem;
+    color: var(--secondary-light);
+}
+
+.social {
+    border-left: var(--secondary) 5px solid;
+    padding-left: 50px;
+}
+
+.social img {
+    width: 60px;
+    margin: 10px;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+}
+
+/* Icon elements */
+
+.icon-elements {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 200px;
+}
+
+/* .icon-elements>div{
+
+} */
+
+.icon-elements a {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.icon-elements img {
+    width: 70px;
+}
+
+.icon-elements img:hover {
+    transform: scale(1.2);
+}
+
+.icon-elements span:hover {
+    color: var(--secondary);
+}
+
+footer {
+    background-color: var(--dark2);
+    text-align: center;
+    color: var(--secondary-light);
+}
+
+/* modals */
+
+/* Estilos para escritorio */
+@media (min-width: 1024px) {
+    .eins-modal-content {
+        min-width: 700px;
+        background-color: var(--dark1);
+    }
+
+    .eins-modal-preview {
+        max-width: 300px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .eins-modal-preview img {
+        width: 100%;
+        height: 50%;
+        padding: 0 50px 20px 0;
+    }
+
+    .pw-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, auto));
+    }
+
+    .eins-modal-text p {
+        font-size: 1.1rem;
+    }
+
+    .eins-modal-text-2 {
+        padding: 80px 0 10px;
+    }
+
+    .eins-modal-text-2 a {
+        color: var(--secondary);
+        font-size: 1rem;
+    }
+
+    .eins-modal-tec img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Estilos para dispositivos móviles (responsive) */
+@media (max-width: 1023px) {
+    .eins-modal-content {
+        width: 90%; /* Ajusta el ancho al 90% de la pantalla */
+        min-width: unset; /* Elimina el ancho mínimo fijo */
+        padding: 10px; /* Reduce el espacio interior */
+        background-color: var(--dark1);
+    }
+
+    .eins-modal-preview {
+        max-width: 100%; /* Usa todo el ancho disponible */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+
+    .eins-modal-preview img {
+        width: 100%; /* Ocupa el ancho completo */
+        height: auto; /* Mantén las proporciones */
+        padding: 0; /* Elimina el padding */
+    }
+
+    .pw-content {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        gap: 15px; /* Espaciado más pequeño entre elementos */
+    }
+
+    .eins-modal-text p {
+        font-size: 1rem; /* Reduce ligeramente el tamaño del texto */
+        line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+    }
+
+    .eins-modal-text-2 {
+        padding: 20px 0 10px; /* Ajusta los márgenes */
+        text-align: center; /* Centra el texto */
+    }
+
+    .eins-modal-text-2 a {
+        font-size: 0.8rem; /* Ajusta el tamaño del enlace */
+        color: var(--secondary);
+        text-decoration: underline; /* Asegura visibilidad */
+    }
+
+    .eins-modal-tec img {
+        width: 40px; /* Íconos más pequeños */
+        height: 40px;
+        margin: 5px; /* Espaciado entre íconos */
+    }
+}
+
+/* Contact form */
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column; /* Cambia "font-display" por "flex-direction" */
+    margin: 0 auto;
+    gap: 15px; /* Añade espacio entre los elementos */
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 1rem; /* Ajusta el tamaño de texto */
+}
+
+form label input, 
+form label textarea {
+    background-color: var(--dark2);
+    border-radius: 10px;
+    padding: 10px; /* Simplifica para un diseño más consistente */
+    color: var(--secondary);
+    outline: none;
+    opacity: 0.7;
+    width: 100%;
+    border: 1px solid var(--dark1); /* Asegura bordes visibles */
+    font-size: 1rem;
+}
+
+form label textarea {
+    min-height: 100px; /* Asegura una altura mínima para el textarea */
+    resize: none; /* Evita el redimensionamiento */
+}
+
+form button {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: none; /* Elimina los bordes del botón */
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Añade un efecto al interactuar */
+}
+
+form button:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
 }
