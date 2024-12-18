@@ -1,58 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/node_modules/eins-modal/dist/css/eins-modal.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <header>
-        <div class="hero">
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Portafolio</a></li>
-                        <li><a href="#">Sobre mi</a></li>
-                    </ul>
-                </nav>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#briefcase">Portafolio</a></li>
+                    <li><a href="#about-me">Sobre mi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="hero" id="inicio">
+            <div class="container">
+
+
+                <img src="./img/blood-moon-0fvdbbnpojps253o.jpg" alt="">
             </div>
-            <img src="./img/blood-moon-0fvdbbnpojps253o.jpg" alt="">
         </div>
 
         <div class="profile">
             <div class="square"></div>
-                <div class="circle-trans"></div>
-                <div class="circle"></div> 
-                <div class="profile-img"><img src="./img/profile.png" alt=""></div>  
-                <div class="square-text">Juan Camilo Herrera Salcedo</div>      
-                <div class="square-text2"><span>TECNÓLOGO EN SISTEMAS | FRONTEND DEVELOPER</span></div>
-                <div class="contact-icon">
-                    <a href="https://github.com/JuanHerreraSalcedo"><img src="./img/github.svg" alt=""></a>
-                    <a href="https://www.linkedin.com/in/juan-camilo-herrera-salcedo-aa7147258/"><img src="./img/linkedin.svg" alt=""></a>
-                    <a href="#"><img src="./img/message.svg" alt=""></a>
-                </div>
-                <div class="square-text3"><a href="#about-me"><span>About me |</span> Sobre Mi</a></div>    
+            <div class="circle-trans"></div>
+            <div class="circle"></div>
+            <div class="profile-img"><img src="./img/profile.png" alt=""></div>
+            <div class="square-text">Juan Camilo Herrera Salcedo</div>
+            <div class="square-text2"><span>TECNÓLOGO EN SISTEMAS | FRONTEND DEVELOPER</span></div>
+            <div class="contact-icon">
+                <a href="https://github.com/JuanHerreraSalcedo" target="_blank"><img src="./img/github.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/juan-camilo-herrera-salcedo-aa7147258/" target="_blank"><img
+                        src="./img/linkedin.svg" alt=""></a>
+                <a data-modal-id="message"><img src="./img/message.svg" alt=""></a>
+            </div>
+            <div class="square-text3"><a href="#about-me"><span>About me |</span> Sobre Mi</a></div>
         </div>
-    </header>
+    </section>
 
     <section class="briefcase" id="briefcase">
-        <div class="briefcase-section">
+        <div class="briefcase-section container">
             <h2><span>Briefcase |</span> Portafolio</h2>
             <div class="briefcase-grid">
-                <div><img src="./img/juego.png" alt=""></div>
-                <div><img src="./img/proyecto-de-grado.png" alt=""></div>
-                <div><img src="./img/lorelis-painting.png" alt=""></div>
+                <div><a data-modal-id="juego"><img src="./img/juego.png" alt=""></a></div>
+                <div><a data-modal-id="oso-meloso"><img src="./img/proyecto-de-grado.png" alt=""></a></div>
+                <div><a data-modal-id="lorelis-painting"><img src="./img/lorelis-painting.png" alt=""></a></div>
             </div>
         </div>
     </section>
 
     <section class="skills">
-        <div class="skill">
+        <div class="skill container">
             <div class="knowledge-part">
                 <h2><span>Knowledge |</span> Conocimientos</h2>
                 <div class="knowledge">
@@ -80,6 +91,18 @@
                         <img src="./img/java.svg" alt="">
                         <h3>JAVA</h3>
                     </div>
+                    <div>
+                        <img src="./img/bootstrap.svg" alt="">
+                        <h3>BOOTSTRAP</h3>
+                    </div>
+                    <div>
+                        <img src="./img/typescript.svg" alt="">
+                        <h3>TYPESCRIPT</h3>
+                    </div>
+                    <div>
+                        <img src="./img/sass.svg" alt="">
+                        <h3>SASS</h3>
+                    </div>
                 </div>
             </div>
 
@@ -102,9 +125,174 @@
                         <img src="./img/git.svg" alt="">
                         <h3>GIT</h3>
                     </div>
+                    <div>
+                        <img src="./img/firebase.svg" alt="">
+                        <h3>FIREBASE</h3>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="about" id="about-me">
+        <div class="about-flex container">
+            <div class="about-info">
+                <p>Mi nombre es Juan Camilo Herrera Salcedo, soy Tecnólogo en Sistemas de Información de la Institución
+                    Universitaria Antonio José Camacho, con experiencia en el desarrollo web y un enfoque en la creación
+                    de experiencias digitales atractivas y funcionales. Experto en HTML, CSS, JavaScript, Bootstrap 4/5
+                    y frameworks como Angular y React. Destacado por mi adaptabilidad, compromiso y pasión por aprender
+                    y aplicar nuevas tecnologías para resolver problemas complejos.</p>
+                <p><br>He trabajado en diversos proyectos web enfocados en el desarrollo y diseño de páginas
+                    personalizadas utilizando tecnologías como WordPress. Entre mis responsabilidades, se incluye la
+                    configuración de temas responsivos para optimizar la experiencia en dispositivos móviles y de
+                    escritorio, así como la mejora del rendimiento, logrando incrementar la velocidad de carga en un
+                    30%. Además, me he encargado del mantenimiento continuo de las plataformas, asegurando
+                    actualizaciones, funcionalidad estable y compatibilidad con diferentes navegadores. Me mantengo en
+                    constante aprendizaje, siempre buscando mejorar mis habilidades y adaptarme a nuevas tecnologías.
+                </p>
+            </div>
+            <div class="social">
+                <a href="https://github.com/JuanHerreraSalcedo" target="_blank"><img src="./img/github.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/juan-camilo-herrera-salcedo-aa7147258/" target="_blank"><img
+                        src="./img/linkedin.svg" alt=""></a>
+                <a data-modal-id="message"><img src="./img/message.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="icon-elements">
+            <div>
+                <a href="https://github.com/JuanHerreraSalcedo/Portafolio2" target="_blank"><img src="./img/github.svg"
+                        alt="">Ver
+                    código de este proyecto desde el repositorio</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>ⓒ 2024 Copyright | Designed by Juan Camilo Herrera Salcedo</p>
+    </footer>
+
+    <div id="lorelis-painting" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200">
+        <div class="eins-modal-content">
+            <div class="eins-modal-close"></div>
+            <div class="pw-content">
+                <div class="eins-modal-preview">
+                    <img src="./img/our-services.png" alt="">
+                </div>
+                <div class="eins-modal-text">
+                    <p>Como desarrollador freelance, trabajé en un proyecto para una empresa estadounidense
+                        especializada en remodelaciones de hogar. Mi participación incluyó el diseño y desarrollo de una
+                        solución web personalizada que mejoró la presencia digital de la empresa y facilitó la
+                        interacción con sus clientes. Este proyecto me permitió aplicar habilidades técnicas avanzadas y
+                        gestionar la comunicación con un cliente internacional, asegurando la entrega de un producto de
+                        alta calidad.</p>
+                    <div class="eins-modal-text-2">
+                        <span>ENLACE</span><a href="https://lorelis-painting.com/" target="_blank">
+                            https://lorelis-painting.com/</a>
+                    </div>
+                    <div class="eins-modal-text-3">
+                        <span>Tecnologías usadas</span>
+                        <div class="eins-modal-tec">
+                            <img src="./img/wordpress.svg" alt="">
+                            <img src="./img/css.svg" alt="">
+                            <img src="./img/html.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="juego" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200">
+        <div class="eins-modal-content">
+            <div class="eins-modal-close"></div>
+            <div class="pw-content">
+                <div class="eins-modal-preview">
+                    <img src="./img/juego.png" alt="">
+                </div>
+                <div class="eins-modal-text">
+                    <p>Desarrollé un juego utilizando JavaScript, HTML y CSS. El juego consiste en recolectar ítems en
+                        un tiempo determinado antes de que finalice el contador. Si el jugador no obtiene todos los
+                        recolectables dentro del tiempo asignado, el juego termina. Implementé una interfaz de usuario
+                        atractiva y un sistema de tiempo real que agrega un desafío adicional y mantiene a los jugadores
+                        comprometidos. Fue una excelente oportunidad para aplicar mis habilidades en desarrollo web y
+                        mejorar la experiencia de usuario.</p>
+                    <div class="eins-modal-text-2">
+                        <span>ENLACE</span>
+                        <br> <a href="https://juanherrerasalcedo.github.io/Juego/" target="_blank">
+                            https://juanherrerasalcedo.github.io/Juego/</a>
+                    </div>
+                    <div class="eins-modal-text-3">
+                        <span>Tecnologías usadas</span>
+                        <div class="eins-modal-tec">
+                            <img src="./img/html.svg" alt="">
+                            <img src="./img/javascript.svg" alt="">
+                            <img src="./img/css.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="oso-meloso" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200">
+        <div class="eins-modal-content">
+            <div class="eins-modal-close"></div>
+            <div class="pw-content">
+                <div class="eins-modal-preview">
+                    <img src="./img/proyecto-de-grado.png" alt="">
+                </div>
+                <div class="eins-modal-text">
+                    <p>Para mi proyecto de grado, desarrollé una plataforma web que implementa un sistema de roles y
+                        usuarios. Esta aplicación permite a docentes, administradores y acudientes interactuar y
+                        comunicarse entre sí. Cada grupo de usuarios tiene acceso controlado según su rol, permitiendo a
+                        los docentes cargar y revisar calificaciones, notas sobre los niños y otros datos académicos.
+                        Los administradores tienen la capacidad de gestionar y configurar la plataforma, mientras que
+                        los acudientes pueden monitorear el progreso académico y la información relevante de sus hijos.
+                        Esta solución facilita la colaboración y la transparencia en la comunicación educativa,
+                        mejorando así la experiencia de todos los involucrados.</p>
+                    <div class="eins-modal-text-2">
+                        <span>ENLACE</span>
+                        <br><a href="https://github.com/JuanHerreraSalcedo/Jardin"
+                            target="_blank">https://github.com/JuanHerreraSalcedo/Jardin</a>
+                    </div>
+                    <div class="eins-modal-text-3">
+                        <span>Tecnologías usadas</span>
+                        <div class="eins-modal-tec">
+                            <img src="./img/angular.svg" alt="">
+                            <img src="./img/html.svg" alt="">
+                            <img src="./img/typescript.svg" alt="">
+                            <img src="./img/bootstrap.svg" alt="">
+                            <img src="./img/firebase.svg" alt="">
+                            <img src="./img/sass.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal section -->
+
+    <div id="message" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200">
+        <div class="eins-modal-content">
+            <div class="eins-modal-close"></div>
+
+            <form action="https://formspree.io/f/xwpkddvp" method="POST">
+                <label>
+                    Tu correo electrónico:
+                    <input type="email" name="email" placeholder="Ingresa tu correo electrónico">
+                </label>
+                <label>
+                    Tu mensaje:
+                    <textarea name="message" placeholder="Ingresa tu mensaje"></textarea>
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <script src="node_modules/eins-modal/dist/js/eins-modal.min.js"></script>
 </body>
+
 </html>
